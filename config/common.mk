@@ -109,8 +109,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=30
 
 # SELinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.build.selinux=1
 
 # madOS Versioning
 ANDROID_VERSION = 7.1.2

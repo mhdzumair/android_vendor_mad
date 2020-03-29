@@ -98,8 +98,8 @@ PRODUCT_PACKAGES += \
     Eleven
 
 # Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/mad/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/mad/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 

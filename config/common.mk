@@ -17,9 +17,16 @@ PRODUCT_PACKAGES += \
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := vendor/mad/cmhw
 
+# Camera
+USE_CAMERA_STUB := true
+
 # Doze
 PRODUCT_PACKAGES += \
     Doze
+
+# Snap
+PRODUCT_PACKAGES += \
+   Snap
 
 # GPS
 PRODUCT_COPY_FILES += \

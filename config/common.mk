@@ -17,6 +17,10 @@ PRODUCT_PACKAGES += \
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := vendor/mad/cmhw
 
+# Doze
+PRODUCT_PACKAGES += \
+    Doze
+
 # GPS
 PRODUCT_COPY_FILES += \
     vendor/mad/prebuilt/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml

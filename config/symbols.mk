@@ -18,5 +18,5 @@ ifeq ($(TARGET_INCLUDE_PROGRAM_BINARY_BUILDER_SYMBOLS),true)
 LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/bin/program_binary_builder|libmtkshim_program_binary_builder.so
 endif
 ifeq ($(TARGET_INCLUDE_VTSERVICE_SYMBOLS),true)
-LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libvtmal.so|libmtkshim_vtservice.so
+LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libvtmal.so|libmtkshim_vtservice.so:/system/vendor/lib/libsink.so|libmtkshim_vtservice.so
 endif

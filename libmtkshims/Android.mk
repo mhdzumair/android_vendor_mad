@@ -62,23 +62,27 @@ ifeq ($(TARGET_INCLUDE_GPS_SYMBOLS),true)
 endif
 
 ifeq ($(TARGET_INCLUDE_PROGRAM_BINARY_BUILDER_SYMBOLS),true)
-		include $(CLEAR_VARS)
-		LOCAL_SRC_FILES := program_binary_builder.cpp
-		LOCAL_SHARED_LIBRARIES := libbinder libutils libcutils
-		LOCAL_MODULE := libmtkshim_program_binary_builder
-		LOCAL_PROPRIETARY_MODULE := true
-		LOCAL_MODULE_TAGS := optional
-		LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-		include $(BUILD_SHARED_LIBRARY)
+    include $(CLEAR_VARS)
+    LOCAL_SRC_FILES := program_binary_builder.cpp
+    LOCAL_SHARED_LIBRARIES := \
+	libbinder \
+	libutils \
+	libcutils
+
+    LOCAL_MODULE := libmtkshim_program_binary_builder
+    LOCAL_MODULE_TAGS := optional
+    include $(BUILD_SHARED_LIBRARY)
 endif
 
 ifeq ($(TARGET_INCLUDE_VTSERVICE_SYMBOLS),true)
-		include $(CLEAR_VARS)
-		LOCAL_SRC_FILES := vtservice.cpp
-		LOCAL_SHARED_LIBRARIES := libbinder libutils libcutils
-		LOCAL_MODULE := libshim_vtservice
-		LOCAL_PROPRIETARY_MODULE := true
-		LOCAL_MODULE_TAGS := optional
-		LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-		include $(BUILD_SHARED_LIBRARY)
+    include $(CLEAR_VARS)
+    LOCAL_SRC_FILES := vtservice.cpp
+    LOCAL_SHARED_LIBRARIES := \
+	libbinder \
+	libutils \
+	libcutils
+
+    LOCAL_MODULE := libmtkshim_vtservice
+    LOCAL_MODULE_TAGS := optional
+    include $(BUILD_SHARED_LIBRARY)
 endif

@@ -72,6 +72,7 @@
 
     <string-array name="config_tether_wifi_regexs">
         <item>wlan\\d</item>
+        <item>ap\\d</item>
     </string-array>
 
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
@@ -82,7 +83,7 @@
     <bool name="config_wifi_background_scan_support">true</bool>
 
     <!-- Wifi DualBand -->
-    <bool name="config_wifi_dual_band_support">true</bool>    
+    <bool name="config_wifi_dual_band_support">true</bool>
 
     <bool name="config_automatic_brightness_available">true</bool>
 
@@ -125,21 +126,6 @@
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
-
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/arm64/boot.oat"</item>
-        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-    </string-array>
-
-    <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- The Google provider -->
-        <item>com.google.android.gms</item>
-        <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
-    </string-array>
 
     <!-- Controls the WiFi wakeup feature.
           0 = Not available.

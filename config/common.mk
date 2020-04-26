@@ -84,22 +84,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniStyle
 
-# OmniJaws
-PRODUCT_PACKAGES += \
-    OmniJaws
-
-# madCamera
-PRODUCT_PACKAGES += \
-    madCamera
-
-# madWallpapers
-PRODUCT_PACKAGES += \
-    madWallpapers
-
-# madLauncher
-PRODUCT_PACKAGES += \
-    madLauncher
-
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
@@ -156,46 +140,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Eleven
 
-# Bootanimation
-ifneq ($(filter 720,$(TARGET_SCREEN_WIDTH)),)
-    PRODUCT_COPY_FILES += \
-        vendor/mad/prebuilt/bootanimation/720p.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter 1080,$(TARGET_SCREEN_WIDTH)),)
-    PRODUCT_COPY_FILES += \
-        vendor/mad/prebuilt/bootanimation/1080p.zip:system/media/bootanimation.zip
-endif
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
 # WiFi Display
 # this property enables the user to access Google WFD settings.
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1
-
-# SELinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
-# madOS Versioning
-ANDROID_VERSION = 8.1.0
-MADOS_VERSION = 2.1.3
-
-ifndef MADOS_BUILD_TYPE
-    MADOS_BUILD_TYPE := OFFICIAL
-endif
-
-MADOS_MOD_VERSION := madOS-$(MADOS_VERSION)-$(shell date -u +%Y%m%d)-$(MADOS_BUILD_TYPE)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mados.version=$(MADOS_VERSION) \
-    ro.mados.releasetype=$(MADOS_BUILD_TYPE) \
-    ro.modversion=$(MADOS_MOD_VERSION)
-
-MADOS_DISPLAY_VERSION := madOS-$(MADOS_VERSION)-$(MADOS_BUILD_TYPE)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mados.display.version=$(MADOS_DISPLAY_VERSION)
 
 # include other configs
 include vendor/mad/config/permissions.mk

@@ -7,7 +7,9 @@ PRODUCT_PACKAGES += \
     libmtkshim_audio \
     libmtkshim_ui \
     libmtkshim_omx \
-    libmtkshim_gps
+    libmtkshim_gps \
+		libmtkshim_vtservice \
+		libmtkshim_program_binary_builder
 
 # Display
 PRODUCT_PACKAGES += \

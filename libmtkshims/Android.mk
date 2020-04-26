@@ -69,3 +69,14 @@ ifeq ($(TARGET_INCLUDE_CAMERA_SYMBOLS),true)
 
 include $(BUILD_SHARED_LIBRARY)
 endif
+
+# aal symbols
+ifeq ($(TARGET_INCLUDE_AAl_SYMBOLS),true)
+    include $(CLEAR_VARS)
+
+    LOCAL_SRC_FILES := aal.cpp
+    LOCAL_MODULE := libmtkshim_aal
+    LOCAL_PROPRIETARY_MODULE := true
+
+    include $(BUILD_SHARED_LIBRARY)
+endif

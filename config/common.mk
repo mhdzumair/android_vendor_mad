@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     libmtkshim_omx \
     libmtkshim_camera \
     libmtkshim_gps \
-		libmtkshim_aal
+    libmtkshim_aal \
+    libmtkshim_ril
 
 # Display
 PRODUCT_PACKAGES += \

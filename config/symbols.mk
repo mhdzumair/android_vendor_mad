@@ -18,8 +18,11 @@ ifeq ($(TARGET_INCLUDE_GPS_SYMBOLS),true)
 LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/bin/mtk_agpsd|libmtkshim_gps.so
 endif
 ifeq ($(TARGET_INCLUDE_CAMERA_SYMBOLS),true)
-LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libfeatureio.so|libmtkshim_camera.so:/system/vendor/lib/libcam_utils.so|libmtkshim_camera.so:/system/vendor/lib/libcam.utils.sensorlistener.so|libmtkshim_camera.so
+LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libfeatureio.so|libmtkshim_camera.so:/system/vendor/lib/libcam_utils.so|libmtkshim_camera.so:/system/vendor/lib/libcam.utils.sensorlistener.so|libmtkshim_camera.so:/system/vendor/lib/libshowlogo.so|libmtkshim_camera.so
 endif
 ifeq ($(TARGET_INCLUDE_AAL_SYMBOLS),true)
 LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libaal.so|libmtkshim_aal.so
+endif
+ifeq ($(TARGET_INCLUDE_RIL_SYMBOLS),true)
+LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/bin/mtkrild|libmtkshim_ril.so
 endif

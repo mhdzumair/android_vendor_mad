@@ -29,8 +29,6 @@
 /(system|system\/vendor|vendor)/bin/hw/vendor.mediatek.hardware.pq@2.0-service              u:object_r:mtk_hal_pq_exec:s0
 
 # exfat & ntfs
-/system/bin/mkfs\.exfat                                         u:object_r:mkfs_exec:s0
-/system/bin/mkfs\.ntfs                                          u:object_r:mkfs_exec:s0
 /system/bin/mount\.ntfs                                         u:object_r:mkfs_exec:s0
 /system/bin/mount\.exfat                                        u:object_r:mkfs_exec:s0
 /system/bin/fsck\.ntfs                                          u:object_r:fsck_exec:s0

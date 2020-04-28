@@ -1,4 +1,5 @@
 #include <string>
+#include <cutils/native_handle.h>
 #include <ui/GraphicBuffer.h>
 
 extern "C" void _ZN7android13GraphicBufferC1EjjijjjP13native_handleb(
@@ -26,6 +27,6 @@ extern "C" void _ZN7android13GraphicBufferC1EjjijjP13native_handleb(
         inFormat, static_cast<uint32_t>(1), static_cast<uint64_t>(inUsage), inStride);
 }
 
-
-extern "C" void _ZN7android21SurfaceComposerClient13createSurfaceERKNS_7String8Ejjij(
-    uint32_t inWidth, uint32_t inHeight, int inFormat, uint32_t inUsage);
+//extern "C" {
+ //void _ZN7android16CameraParameters25KEY_SNAPSHOT_PICTURE_FLIPE(){}
+//}

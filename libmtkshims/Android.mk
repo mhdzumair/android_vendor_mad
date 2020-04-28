@@ -63,10 +63,11 @@ ifeq ($(TARGET_INCLUDE_CAMERA_SYMBOLS),true)
     include $(CLEAR_VARS)
 
     LOCAL_SRC_FILES := camera.cpp
-    LOCAL_SHARED_LIBRARIES := libdpframework
+    LOCAL_SHARED_LIBRARIES := libgui libui libdpframework
     LOCAL_MODULE := libmtkshim_camera
-    LOCAL_PROPRIETARY_MODULE := true
-
+    LOCAL_C_INCLUDES += frameworks/native/include
+    LOCAL_MODULE_TAGS := optional
+    LOCAL_MULTILIB := 32
 include $(BUILD_SHARED_LIBRARY)
 endif
 
@@ -77,6 +78,16 @@ ifeq ($(TARGET_INCLUDE_AAl_SYMBOLS),true)
     LOCAL_SRC_FILES := aal.cpp
     LOCAL_MODULE := libmtkshim_aal
     LOCAL_PROPRIETARY_MODULE := true
-
     include $(BUILD_SHARED_LIBRARY)
 endif
+
+ifeq ($(TARGET_INCLUDE_RIL_SYMBOLS),true)
+    include $(CLEAR_VARS)
+
+    LOCAL_SRC_FILES := ril.cpp
+    LOCAL_MODULE := libmtkshim_ril
+    LOCAL_PROPRIETARY_MODULE := true
+    LOCAL_SHARED_LIBRARIES := libutils librilutils libril
+    include $(BUILD_SHARED_LIBRARY)
+endif
+

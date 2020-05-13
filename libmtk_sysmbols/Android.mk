@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-ifeq ($(TARGET_INCLUDE_XLOG_SYMBOLS),true)
+ifeq ($(TARGET_INCLUDE_LIBMTK_SYMBOLS),true)
 	include $(CLEAR_VARS)
 
 	LOCAL_SRC_FILES := \
@@ -8,7 +8,10 @@ ifeq ($(TARGET_INCLUDE_XLOG_SYMBOLS),true)
 	    mtk_audio.cpp \
 	    mtk_fence.cpp \
 	    mtk_omx.cpp \
-	    mtk_ui.cpp
+	    mtk_ui.cpp \
+			program_binary_builder.cpp \
+			ssl.cpp \
+			vtservice.cpp
 
 	LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc libicui18n libmedia
 	LOCAL_MODULE := libmtk_symbols

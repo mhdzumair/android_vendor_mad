@@ -1,6 +1,7 @@
 #include <ui/GraphicBufferMapper.h>
 #include <ui/PixelFormat.h>
 #include <ui/Rect.h>
+#include <binder/IBinder.h>
 
 extern "C" {
     void _ZN7android19GraphicBufferMapper9lockYCbCrEPK13native_handlejRKNS_4RectEP13android_ycbcr(buffer_handle_t, uint32_t, const android::Rect&, android_ycbcr*);
@@ -20,4 +21,8 @@ extern "C" {
     void _ZN7android5Fence4waitEj(unsigned int timeout) {
         _ZN7android5Fence4waitEi(static_cast<int>(timeout));
     }
+
+    void _ZN7android11IDumpTunnel11asInterfaceERKNS_2spINS_7IBinderEEE(const android::sp<android::IBinder>&) {}
+
+    void _ZN7android16CameraParameters25KEY_SNAPSHOT_PICTURE_FLIPE(){}
 }

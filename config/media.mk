@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     libtinycompress \
     libtinymix \
-    libtinyxml
+    libtinyxml \
+		libaudio-resampler
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \

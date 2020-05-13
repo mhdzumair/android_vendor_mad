@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
     libmtkshim_omx \
     libmtkshim_gps \
 		libmtkshim_vtservice \
-		libmtkshim_program_binary_builder
+		libmtkshim_program_binary_builder \
+		libmtk_symbols
 
 # Display
 PRODUCT_PACKAGES += \
@@ -78,10 +79,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+PRODUCT_PACKAGES += \
+    librs_jni
+
 # Charger
 PRODUCT_PACKAGES += \
+		charger \
     charger_res_images \
-    mad_charger_res_images
+    mad_charger_res_images \
+		libnl_2 \
+    libion
 
 # WallpaperPicker
 PRODUCT_PACKAGES += \
@@ -104,6 +111,29 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.vc_call_vol_steps=14 \
     ro.config.media_vol_steps=30
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.legacyencoder=0
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.hw.gyroscope=false \
+	persist.radio.apn_delay=5000 \
+	persist.sys.media.use-awesome=false \
+	media.stagefright.use-awesome=false
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp
+
+# Keyhandler package
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
+
+PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
+
+# Never dexopt the keyhandler
+$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
 
 # include other configs
 include vendor/mad/config/permissions.mk

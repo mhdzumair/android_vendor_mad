@@ -13,7 +13,7 @@ ifeq ($(TARGET_INCLUDE_LIBMTK_SYMBOLS),true)
 			ssl.cpp \
 			vtservice.cpp
 
-	LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc libicui18n libmedia
+	LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc libicui18n libmedia libnetutils
 	LOCAL_MODULE := libmtk_symbols
 	LOCAL_MODULE_TAGS := optional
 	include $(BUILD_SHARED_LIBRARY)

@@ -10,7 +10,7 @@ ifeq ($(TARGET_INCLUDE_LIBMTK_SYMBOLS),true)
 	    mtk_omx.cpp \
 	    mtk_ui.cpp \
 			program_binary_builder.cpp \
-			ssl.cpp \
+			ssl.c \
 			vtservice.cpp
 
 	LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc libicui18n libmedia libnetutils

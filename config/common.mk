@@ -27,24 +27,12 @@ USE_CAMERA_STUB := true
 PRODUCT_PACKAGES += \
     Doze
 
-# Snap
-PRODUCT_PACKAGES += \
-   Snap
-
 # GPS
 PRODUCT_COPY_FILES += \
     vendor/mad/prebuilt/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 PRODUCT_PACKAGES += \
     libcurl
-
-# OmniStyle
-PRODUCT_PACKAGES += \
-    OmniStyle
-
-# OmniJaws
-PRODUCT_PACKAGES += \
-    OmniJaws
 
 
 # Include explicitly to work around Facelock issues
@@ -126,14 +114,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
-# Keyhandler package
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.keyhandler
-
-PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
-
-# Never dexopt the keyhandler
-$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
 
 # include other configs
 include vendor/mad/config/permissions.mk

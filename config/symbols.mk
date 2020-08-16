@@ -21,5 +21,5 @@ ifeq ($(TARGET_INCLUDE_VTSERVICE_SYMBOLS),true)
 LINKER_FORCED_SHIM_LIBS := $(LINKER_FORCED_SHIM_LIBS):/system/vendor/lib/libvtmal.so|libmtkshim_vtservice.so:/system/vendor/lib/libsink.so|libmtkshim_vtservice.so
 endif
 ifeq ($(TARGET_INCLUDE_LIBMTK_SYMBOLS),true)
-TARGET_LDPRELOAD += mtk_symbols.so
+TARGET_LDPRELOAD += libmtk_symbols.so
 endif

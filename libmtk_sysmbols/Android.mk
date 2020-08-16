@@ -11,7 +11,8 @@ ifeq ($(TARGET_INCLUDE_LIBMTK_SYMBOLS),true)
 	    mtk_ui.cpp \
 			program_binary_builder.cpp \
 			ssl.c \
-			vtservice.cpp
+			vtservice.cpp \
+			mtkmal.cpp
 
 	LOCAL_SHARED_LIBRARIES := libbinder liblog libgui libui libicuuc libicui18n libmedia libnetutils
 	LOCAL_MODULE := libmtk_symbols

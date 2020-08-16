@@ -10,7 +10,6 @@ ifeq ($(TARGET_INCLUDE_LIBMTK_SYMBOLS),true)
 	    mtk_omx.cpp \
 	    mtk_ui.cpp \
 			program_binary_builder.cpp \
-			ssl.c \
 			vtservice.cpp \
 			mtkmal.cpp
 

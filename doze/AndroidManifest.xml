@@ -26,6 +26,7 @@
 
     <application
         android:label="@string/device_settings_app_name"
+        android:theme="@style/Theme.Settings"
         android:persistent="true">
 
         <receiver android:name=".BootCompletedReceiver">
@@ -41,8 +42,7 @@
 
         <activity
             android:name=".DozeSettingsActivity"
-            android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.Main">
+            android:label="@string/ambient_display_title">
             <intent-filter>
                 <action android:name="org.cyanogenmod.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />

@@ -11,7 +11,5 @@
      limitations under the License.
 -->
 
-<ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@android:color/transparent">
-    <item android:drawable="?android:attr/colorSecondary" />
-</ripple>
+<color xmlns:android="http://schemas.android.com/apk/res/android"
+       android:color="?android:attr/colorBackground" />

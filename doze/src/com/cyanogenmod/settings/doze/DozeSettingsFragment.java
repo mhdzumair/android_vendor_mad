@@ -43,7 +43,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
     private TextView mTextView;
 
-    private SwitchPreference mPickUpPreference;
     private SwitchPreference mHandwavePreference;
     private SwitchPreference mPocketPreference;
 
@@ -58,9 +57,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         }
 
         boolean dozeEnabled = Utils.isDozeEnabled(getActivity());
-
-        mPickUpPreference = (SwitchPreference) findPreference(Utils.GESTURE_PICK_UP_KEY);
-        mPickUpPreference.setEnabled(dozeEnabled);
 
         mHandwavePreference = (SwitchPreference) findPreference(Utils.GESTURE_HAND_WAVE_KEY);
         mHandwavePreference.setEnabled(dozeEnabled);
@@ -113,7 +109,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
         mTextView.setText(getString(b ? R.string.switch_bar_on : R.string.switch_bar_off));
 
-        mPickUpPreference.setEnabled(b);
         mHandwavePreference.setEnabled(b);
         mPocketPreference.setEnabled(b);
     }
